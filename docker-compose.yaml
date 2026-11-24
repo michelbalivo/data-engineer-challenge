@@ -1,0 +1,62 @@
+services:
+  # Kafka (Redpanda, compatible con la API de Kafka). Conexión:
+  #   desde tu máquina:                         localhost:19092
+  #   desde servicios de este docker-compose:   redpanda:9092
+  #   desde contenedores de otro compose:       host.docker.internal:29092
+  redpanda:
+    image: redpandadata/redpanda:v24.2.27
+    container_name: de-redpanda
+    command:
+      - redpanda
+      - start
+      - --mode=dev-container
+      - --smp=1
+      - --memory=1G
+      - --kafka-addr=internal://0.0.0.0:9092,external://0.0.0.0:19092,docker://0.0.0.0:29092
+      - --advertise-kafka-addr=internal://redpanda:9092,external://localhost:19092,docker://host.docker.internal:29092
+    ports:
+      - "19092:19092"
+      - "29092:29092"
+    healthcheck:
+      test: ["CMD-SHELL", "rpk cluster health | grep -E 'Healthy:.+true' || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+
+  source-system:
+    build: ./source-system
+    container_name: de-source-system
+    ports:
+      - "3001:3001"
+    environment:
+      SOURCE_API_KEY: de-test-2026
+      SOURCE_CLOCK: ${SOURCE_CLOCK:-}
+      KAFKA_BOOTSTRAP: redpanda:9092
+    depends_on:
+      redpanda:
+        condition: service_healthy
+    volumes:
+      - ${SOURCE_DATA_DIR:-./source-system/data}:/data:ro
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:3001/health')"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+
+  # ------------------------------------------------------------------
+  # Tus servicios: añade aquí lo que necesites (pipeline, api, web...).
+  # La API debe escuchar en el puerto 5000 y el dashboard en el 8080.
+  # Si haces el servidor MCP opcional, en el 7000.
+  # ------------------------------------------------------------------
+
+  load-test:
+    image: grafana/k6:0.54.0
+    profiles: ["test"]
+    volumes:
+      - ./platform/k6:/scripts:ro
+      - ./platform/k6/results:/results
+    environment:
+      TARGET_URL: ${TARGET_URL:-http://host.docker.internal:5000}
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: ["run", "--summary-export=/results/summary.json", "/scripts/test.js"]

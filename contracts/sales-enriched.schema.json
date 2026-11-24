@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "sales.enriched",
+  "description": "Valor de cada mensaje del topic sales.enriched (JSON). Clave del mensaje: TICKET_ID-LINE_NO. Si una línea cambia, se publica de nuevo con la misma clave: vale el último mensaje.",
+  "type": "object",
+  "required": ["ticket_id", "line_no", "line_type", "business_date", "store_code", "region", "sku", "family",
+               "list_price_eur", "channel", "quantity", "net_amount_local", "currency", "net_amount_eur", "event_ts"],
+  "properties": {
+    "ticket_id": {"type": "string"},
+    "line_no": {"type": "integer"},
+    "line_type": {"enum": ["SALE", "RETURN"]},
+    "business_date": {"type": "string", "format": "date", "description": "Día de negocio: la fecha local de la tienda"},
+    "store_code": {"type": "string"},
+    "region": {"type": "string", "description": "Región de la tienda en el momento de la venta"},
+    "sku": {"type": "string"},
+    "family": {"type": "string", "description": "Familia del producto en el momento de la venta"},
+    "list_price_eur": {"type": "number", "description": "Precio de tarifa del producto en el momento de la venta"},
+    "channel": {"enum": ["STORE", "ONLINE"]},
+    "quantity": {"type": "integer", "description": "Unidades, en positivo"},
+    "net_amount_local": {"type": "number", "description": "Importe neto, sin impuestos, en la moneda de la tienda y en positivo"},
+    "currency": {"type": "string"},
+    "net_amount_eur": {"type": "number", "description": "El mismo importe en euros, al tipo de cambio vigente en el día de negocio"},
+    "event_ts": {"type": "string", "format": "date-time", "description": "Instante de la venta (UTC)"}
+  },
+  "additionalProperties": true
+}

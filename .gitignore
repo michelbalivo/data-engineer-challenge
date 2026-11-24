@@ -1,0 +1,16 @@
+.env
+secrets/
+*.p8
+*.pem
+*.pub
+__pycache__/
+.venv/
+venv/
+node_modules/
+dist/
+build/
+target/
+logs/
+dbt_packages/
+.user.yml
+platform/k6/results/

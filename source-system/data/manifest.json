@@ -1,0 +1,326 @@
+{
+ "dataset_version": 2,
+ "period": {
+  "start": "2026-10-01",
+  "end": "2026-11-11",
+  "days": 42
+ },
+ "systems": {
+  "pos-b": "csv.gz"
+ },
+ "topics": {
+  "pos-a.tickets": {
+   "partitions": 6,
+   "key": "store_code"
+  },
+  "catalog.products": {
+   "partitions": 3,
+   "key": "sku"
+  },
+  "sales.enriched": {
+   "partitions": 6,
+   "key": "TICKET_ID-LINE_NO"
+  }
+ },
+ "files": [
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-01",
+   "file": "2026-10-01.csv.gz",
+   "records": 3527,
+   "sha256": "6545d8a7f947655c131c26b43d96363e8a0ae8bfeb4be72ad04b0c1dc2268608"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-02",
+   "file": "2026-10-02.csv.gz",
+   "records": 4496,
+   "sha256": "e0aac4296e4816ca0c7cd98fe2854214f51f39e290130eb28b9194481510ba4d"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-03",
+   "file": "2026-10-03.csv.gz",
+   "records": 5482,
+   "sha256": "9c159e7937af21b6f687a609e1af7a7a92d8f61abfe3903374330b5a21f2956f"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-04",
+   "file": "2026-10-04.csv.gz",
+   "records": 1537,
+   "sha256": "c96a1d55ffdd11f903348476417e2066e54bc4e24759ac86a08febe4f85cb264"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-05",
+   "file": "2026-10-05.csv.gz",
+   "records": 3253,
+   "sha256": "f46e1791ada6a6550c4d27f79a220305e7911e520dc26fc559b945fae6890795"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-06",
+   "file": "2026-10-06.csv.gz",
+   "records": 3202,
+   "sha256": "39033b322fdd01feb9741eb667eb34d7f477fb95f5a5322cab72fbc5d81124ee"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-07",
+   "file": "2026-10-07.csv.gz",
+   "records": 3297,
+   "sha256": "669a7aae0cf2513188f7a8937efef76f33493a85436715c3b75ac3b0a4bdb396"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-08",
+   "file": "2026-10-08.csv.gz",
+   "records": 3654,
+   "sha256": "d1eaf2b0d629efd6cc70d91ad8e2b9563e482dc4e49269b3b00f1df05a2c1886"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-09",
+   "file": "2026-10-09.csv.gz",
+   "records": 4392,
+   "sha256": "1908970f3e2be4995f2e98faee2bc2e12adc2e3e992147c79d78ef00672a56a7"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-10",
+   "file": "2026-10-10.csv.gz",
+   "records": 5423,
+   "sha256": "f813e04ed62a76b0bcf1a88abb9fda6f3c2bae76406335a8c5d07f25a47dc740"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-11",
+   "file": "2026-10-11.csv.gz",
+   "records": 1425,
+   "sha256": "68a0e9f5281daadbdd8125bf1bd4ff3118e341396234b959eb3610108ff30d5a"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-12",
+   "file": "2026-10-12.csv.gz",
+   "records": 3319,
+   "sha256": "b143056a8559a028b22c5215d2c7b97cb6a24b777579c15a96f45d69a7d37245"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-13",
+   "file": "2026-10-13.csv.gz",
+   "records": 3430,
+   "sha256": "7e421a8381584e63d7688738ecff2881c40b6ac2c43df9dd7e76e2ab4ec2f868"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-14",
+   "file": "2026-10-14.csv.gz",
+   "records": 3597,
+   "sha256": "fda3b275d0ab2d42f8986ab07e6cee5c16855de8d5efde05772b160f4a562215"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-15",
+   "file": "2026-10-15.csv.gz",
+   "records": 3535,
+   "sha256": "3e9633ddc487bd226bad509a0afa80b945e13a0b1529bd0605f919d8c99babf3"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-16",
+   "file": "2026-10-16.csv.gz",
+   "records": 4531,
+   "sha256": "40b9043f9248ba213fa7c7f279ccc3dfbcb30976d272d30d61a67cef709b7d1e"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-17",
+   "file": "2026-10-17.csv.gz",
+   "records": 5401,
+   "sha256": "b677e776856ff315fd1a42cfa247beaa8997648d3733b06417701cc5f75f374c"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-18",
+   "file": "2026-10-18.csv.gz",
+   "records": 1690,
+   "sha256": "82611390a9374d7e3e33a11ffc849d456651a7f8078c322d06aa272d61e2472b"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-19",
+   "file": "2026-10-19.csv.gz",
+   "records": 3243,
+   "sha256": "6b8150f826f3d09d5f6aef3afe755da996f55b935ca2d5904f1877bcab402d4a"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-20",
+   "file": "2026-10-20.csv.gz",
+   "records": 3346,
+   "sha256": "3cf83eb0f12794cf67e0afc06b80b8a9c93209f43649b2581f8432fa2e87566a"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-21",
+   "file": "2026-10-21.csv.gz",
+   "records": 3646,
+   "sha256": "8434a47b02c8d8704caa4af193b60050cd387dc2b189cd6e82a986793a738f2a"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-22",
+   "file": "2026-10-22.csv.gz",
+   "records": 3888,
+   "sha256": "c7c05c6a50ff2efe17c8549c5a668b6943899fcc89c418b4a29ad0c20ec812ab"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-23",
+   "file": "2026-10-23.csv.gz",
+   "records": 4200,
+   "sha256": "0997abf43c8322a2f42180c894a55b901a33cc0f241ff3138ebb8141ccbe1cc4"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-24",
+   "file": "2026-10-24.csv.gz",
+   "records": 5734,
+   "sha256": "bd22d3c08b2c8882be561d21abafd79f2f805ba30984d68751807efddb49425d"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-25",
+   "file": "2026-10-25.csv.gz",
+   "records": 1518,
+   "sha256": "54e2f9804d17bc7514e71451566e0b99ba57ad1abf67438a45632277cf2d7f7b"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-26",
+   "file": "2026-10-26.csv.gz",
+   "records": 3353,
+   "sha256": "99189aa02957bf71149b70902d540e3c1e884d90573d85d184620f83e0dea18a"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-27",
+   "file": "2026-10-27.csv.gz",
+   "records": 3311,
+   "sha256": "cee55ce24e8265cf218154e821abee809030a1fa338aebb96a4a45a3d9919918"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-28",
+   "file": "2026-10-28.csv.gz",
+   "records": 3351,
+   "sha256": "3abca04e344eda79535d29c216daf4a8129bfe32965577fb6f93c55f98cfeeb3"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-29",
+   "file": "2026-10-29.csv.gz",
+   "records": 3849,
+   "sha256": "ddfea1d92362c5dd050df5d8d1052389f375c5b148cefa000cd141a5325b7ffa"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-30",
+   "file": "2026-10-30.csv.gz",
+   "records": 4226,
+   "sha256": "3e1406f4a4bbb98042a311cf6ea44cbabec10785987148d396d6a718b4c64650"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-10-31",
+   "file": "2026-10-31.csv.gz",
+   "records": 5681,
+   "sha256": "f3735e8b79ce83419b1ba821ba2bcef19c6102822190a10b5b8c4318b33421dc"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-01",
+   "file": "2026-11-01.csv.gz",
+   "records": 1546,
+   "sha256": "90d969a82dada09ee278d9d34ce84e2c7964448f25fecefaf4b334c217049c42"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-02",
+   "file": "2026-11-02.csv.gz",
+   "records": 3466,
+   "sha256": "ae2702020084e789400a22f15f73985f9ecdc2e4ec27fa05002ba19571fe195b"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-03",
+   "file": "2026-11-03.csv.gz",
+   "records": 3228,
+   "sha256": "602c2e4b6f37c70a8d12e870bfba1af50e65e7190729d32c8884fb280e0b7e61"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-04",
+   "file": "2026-11-04.csv.gz",
+   "records": 3552,
+   "sha256": "a126434242dfef1071356b4ccfd37b9b3e6688c99b72ff7ef197cd0b5c198b27"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-05",
+   "file": "2026-11-05.csv.gz",
+   "records": 3959,
+   "sha256": "57329ee0438d68de8c4e56e8b9c447d16ec8e8432442e3b534433489f3db72d2"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-06",
+   "file": "2026-11-06.csv.gz",
+   "records": 4369,
+   "sha256": "fedcaec6a03f74564b5ee2357b2ebb7bb499175c232ed66e083b44da355b3b7f"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-07",
+   "file": "2026-11-07.csv.gz",
+   "records": 5835,
+   "sha256": "e39280c1501ea73624a576626b8aca0f4df137d31d0d310522c9d6f9e3adb5e4"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-08",
+   "file": "2026-11-08.csv.gz",
+   "records": 1555,
+   "sha256": "c7ed687619eddc1f59ae84d2bc4470688eeecae0dfc763b170abe29d5e9d817d"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-09",
+   "file": "2026-11-09.csv.gz",
+   "records": 3334,
+   "sha256": "974f682ee057db984d80ea61603e400b966f3814e115c3b245f1e873feeb7a09"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-10",
+   "file": "2026-11-10.csv.gz",
+   "records": 3436,
+   "sha256": "8d03aa14f37a7c091fb03ddd84a7afc4b47fc2825391de79e4f3d4922b3ebf99"
+  },
+  {
+   "system": "pos-b",
+   "export_date": "2026-11-11",
+   "file": "2026-11-11.csv.gz",
+   "records": 3769,
+   "sha256": "30214bb0008dca5c312bb24452cd11b26e0ece0cd8ddd4627c3285df43cccbef"
+  }
+ ],
+ "events": {
+  "pos-a.tickets": 164457,
+  "catalog.products": 21021
+ },
+ "default_clock": "2026-11-12"
+}

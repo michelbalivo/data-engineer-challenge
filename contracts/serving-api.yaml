@@ -1,0 +1,212 @@
+openapi: 3.0.3
+info:
+  title: Retail KPIs API
+  version: 1.0.0
+  description: |
+    API que **debes implementar** sobre tu capa gold. La usará tu dashboard y la evaluará una suite automática.
+
+    Reglas comunes:
+    - Rangos de fechas `from`/`to` **inclusivos**, en formato `YYYY-MM-DD`. Máximo 92 días por petición.
+    - `days` incluye **todas** las fechas del rango en orden ascendente. Un día sin actividad aparece con
+      `has_data: false` y métricas a 0.
+    - `tickets` cuenta los tickets con al menos una línea de venta. Las ventas son importes netos (sin impuestos)
+      y no incluyen devoluciones, que van aparte y en positivo.
+    - Importes como número JSON con 2 decimales.
+    - Errores con formato Problem Details (RFC 7807).
+
+    Requisitos no funcionales (se miden en la evaluación):
+    - **p95 < 300 ms** con el perfil de carga de `platform/k6`.
+    - Tras un `make run-day`, la API sirve los datos nuevos en **5 minutos como máximo**.
+servers:
+  - url: http://localhost:5000
+paths:
+  /v1/kpis/daily:
+    get:
+      summary: KPIs diarios de un país (en EUR)
+      parameters:
+        - $ref: '#/components/parameters/Country'
+        - $ref: '#/components/parameters/From'
+        - $ref: '#/components/parameters/To'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/CountryDailyKpis' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+  /v1/stores/{store_code}/kpis:
+    get:
+      summary: KPIs diarios de una tienda (moneda local y EUR) y su tasa de devolución
+      parameters:
+        - name: store_code
+          in: path
+          required: true
+          schema: { type: string, example: ES-MAD-001 }
+        - $ref: '#/components/parameters/From'
+        - $ref: '#/components/parameters/To'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/StoreKpis' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '404': { $ref: '#/components/responses/NotFound' }
+  /v1/products/top:
+    get:
+      summary: Modelos más vendidos de un país (por ventas netas en EUR)
+      description: |
+        Agrega por `model_code` (todas las tallas y colores). Orden: `sales_net_eur` descendente y, a igualdad,
+        `model_code` ascendente. `family` es la familia **actual** del modelo.
+      parameters:
+        - $ref: '#/components/parameters/Country'
+        - $ref: '#/components/parameters/From'
+        - $ref: '#/components/parameters/To'
+        - name: limit
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 50, default: 10 }
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/TopProducts' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+  /v1/meta/freshness:
+    get:
+      summary: Hasta qué día de negocio hay datos cargados y cuándo fue la última carga
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [last_business_date, loaded_at]
+                properties:
+                  last_business_date: { type: string, format: date }
+                  loaded_at: { type: string, format: date-time }
+components:
+  parameters:
+    Country:
+      name: country
+      in: query
+      required: true
+      schema: { type: string, enum: [ES, FR, MX, PT, GB] }
+    From:
+      name: from
+      in: query
+      required: true
+      schema: { type: string, format: date }
+    To:
+      name: to
+      in: query
+      required: true
+      schema: { type: string, format: date }
+  responses:
+    BadRequest:
+      description: Parámetros inválidos (fechas mal formadas, from > to, rango > 92 días, país desconocido, limit fuera de rango)
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+    NotFound:
+      description: La tienda no existe
+      content:
+        application/problem+json:
+          schema: { $ref: '#/components/schemas/Problem' }
+  schemas:
+    Problem:
+      type: object
+      required: [title, status]
+      properties:
+        type: { type: string }
+        title: { type: string }
+        status: { type: integer }
+        detail: { type: string }
+    CountryDay:
+      type: object
+      required: [date, has_data, tickets, sales_units, sales_net_eur, returns_net_eur]
+      properties:
+        date: { type: string, format: date }
+        has_data: { type: boolean }
+        tickets: { type: integer }
+        sales_units: { type: integer }
+        sales_net_eur: { type: number }
+        returns_net_eur: { type: number }
+    CountryDailyKpis:
+      type: object
+      required: [country, currency, from, to, days, totals]
+      properties:
+        country: { type: string }
+        currency: { type: string, enum: [EUR] }
+        from: { type: string, format: date }
+        to: { type: string, format: date }
+        days:
+          type: array
+          items: { $ref: '#/components/schemas/CountryDay' }
+        totals:
+          type: object
+          required: [tickets, sales_units, sales_net_eur, returns_net_eur]
+          properties:
+            tickets: { type: integer }
+            sales_units: { type: integer }
+            sales_net_eur: { type: number }
+            returns_net_eur: { type: number }
+    StoreDay:
+      type: object
+      required: [date, has_data, tickets, sales_units, sales_net_local, sales_net_eur, returns_units, returns_net_local]
+      properties:
+        date: { type: string, format: date }
+        has_data: { type: boolean }
+        tickets: { type: integer }
+        sales_units: { type: integer }
+        sales_net_local: { type: number }
+        sales_net_eur: { type: number }
+        returns_units: { type: integer }
+        returns_net_local: { type: number }
+    StoreKpis:
+      type: object
+      required: [store_code, country_code, currency, region, from, to, days, totals]
+      properties:
+        store_code: { type: string }
+        country_code: { type: string }
+        currency: { type: string, description: Moneda local de la tienda }
+        region: { type: string, description: Región vigente de la tienda }
+        from: { type: string, format: date }
+        to: { type: string, format: date }
+        days:
+          type: array
+          items: { $ref: '#/components/schemas/StoreDay' }
+        totals:
+          type: object
+          required: [tickets, sales_units, sales_net_local, sales_net_eur, returns_units, returns_net_local, returns_rate]
+          properties:
+            tickets: { type: integer }
+            sales_units: { type: integer }
+            sales_net_local: { type: number }
+            sales_net_eur: { type: number }
+            returns_units: { type: integer }
+            returns_net_local: { type: number }
+            returns_rate:
+              type: number
+              nullable: true
+              description: returns_units / sales_units con 4 decimales; null si sales_units = 0
+    TopProducts:
+      type: object
+      required: [country, from, to, items]
+      properties:
+        country: { type: string }
+        from: { type: string, format: date }
+        to: { type: string, format: date }
+        items:
+          type: array
+          items:
+            type: object
+            required: [rank, model_code, model_name, family, units, sales_net_eur]
+            properties:
+              rank: { type: integer }
+              model_code: { type: string }
+              model_name: { type: string }
+              family: { type: string }
+              units: { type: integer }
+              sales_net_eur: { type: number }

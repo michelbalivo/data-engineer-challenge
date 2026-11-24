@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "schema": "GOLD",
+  "description": "Vista que lee la evaluación. Puedes añadir columnas, pero no quitar ni renombrar estas. Definiciones en readme.md.",
+  "objects": {
+    "V_SALES_LINES": ["TICKET_ID", "LINE_NO", "LINE_TYPE", "BUSINESS_DATE", "STORE_CODE", "REGION", "SKU", "FAMILY", "LIST_PRICE_EUR", "CHANNEL", "QUANTITY", "NET_AMOUNT_LOCAL", "CURRENCY", "NET_AMOUNT_EUR"]
+  }
+}

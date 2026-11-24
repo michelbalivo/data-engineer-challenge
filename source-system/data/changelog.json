@@ -1,0 +1,42 @@
+[
+ {
+  "date": "2026-08-17",
+  "system": "api",
+  "text": "Publicada la v1 del API de integración."
+ },
+ {
+  "date": "2026-10-07",
+  "system": "pos-a",
+  "text": "Lanzamiento de click & collect en ES, FR y MX. El export del TPV nuevo incluye el campo `channel` (STORE | ONLINE). Los pedidos online se asignan a la tienda de recogida y se fechan en su día local."
+ },
+ {
+  "date": "2026-10-12",
+  "system": "pos-b",
+  "text": "TPV legacy actualizado a la versión 4.2 (mejoras de rendimiento en la exportación nocturna)."
+ },
+ {
+  "date": "2026-10-16",
+  "system": "stores",
+  "text": "Apertura de la tienda ES-ZAZ-001."
+ },
+ {
+  "date": "2026-10-19",
+  "system": "catalog",
+  "text": "Inicio de rebajas de mitad de temporada en una selección de modelos."
+ },
+ {
+  "date": "2026-10-19",
+  "system": "stores",
+  "text": "Reorganización comercial: nueva región IBERIA-ESTE."
+ },
+ {
+  "date": "2026-10-24",
+  "system": "catalog",
+  "text": "Revisión de la jerarquía de producto: nuevas familias ABRIGOS y SOBRECAMISAS."
+ },
+ {
+  "date": "2026-11-05",
+  "system": "catalog",
+  "text": "Descatalogación de referencias de temporada anterior."
+ }
+]

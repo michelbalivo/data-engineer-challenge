@@ -1,0 +1,3 @@
+# LF en todas las plataformas: el Makefile y lo que corre dentro de Docker fallan con CRLF
+* text=auto eol=lf
+*.gz binary

@@ -1,0 +1,122 @@
+[
+ {
+  "store_code": "GB-BHM-001",
+  "business_date": "2026-10-04",
+  "currency": "GBP",
+  "tickets": 88,
+  "sales_units": 242,
+  "sales_net": "8419.46",
+  "returns_units": 9,
+  "returns_net": "233.44"
+ },
+ {
+  "store_code": "GB-BRS-001",
+  "business_date": "2026-10-04",
+  "currency": "GBP",
+  "tickets": 79,
+  "sales_units": 203,
+  "sales_net": "6961.72",
+  "returns_units": 2,
+  "returns_net": "84.16"
+ },
+ {
+  "store_code": "GB-GLA-001",
+  "business_date": "2026-10-04",
+  "currency": "GBP",
+  "tickets": 87,
+  "sales_units": 218,
+  "sales_net": "7509.52",
+  "returns_units": 2,
+  "returns_net": "81.65"
+ },
+ {
+  "store_code": "GB-LON-001",
+  "business_date": "2026-10-04",
+  "currency": "GBP",
+  "tickets": 170,
+  "sales_units": 402,
+  "sales_net": "13617.63",
+  "returns_units": 13,
+  "returns_net": "420.25"
+ },
+ {
+  "store_code": "GB-LON-002",
+  "business_date": "2026-10-04",
+  "currency": "GBP",
+  "tickets": 82,
+  "sales_units": 223,
+  "sales_net": "7841.26",
+  "returns_units": 1,
+  "returns_net": "8.49"
+ },
+ {
+  "store_code": "GB-MAN-001",
+  "business_date": "2026-10-04",
+  "currency": "GBP",
+  "tickets": 105,
+  "sales_units": 285,
+  "sales_net": "10060.06",
+  "returns_units": 3,
+  "returns_net": "65.81"
+ },
+ {
+  "store_code": "MX-GDL-001",
+  "business_date": "2026-10-04",
+  "currency": "MXN",
+  "tickets": 79,
+  "sales_units": 194,
+  "sales_net": "136024.05",
+  "returns_units": 3,
+  "returns_net": "4066.38"
+ },
+ {
+  "store_code": "MX-MEX-001",
+  "business_date": "2026-10-04",
+  "currency": "MXN",
+  "tickets": 155,
+  "sales_units": 400,
+  "sales_net": "340047.53",
+  "returns_units": 6,
+  "returns_net": "4131.99"
+ },
+ {
+  "store_code": "MX-MEX-002",
+  "business_date": "2026-10-04",
+  "currency": "MXN",
+  "tickets": 97,
+  "sales_units": 260,
+  "sales_net": "207098.62",
+  "returns_units": 7,
+  "returns_net": "3117.33"
+ },
+ {
+  "store_code": "MX-MEX-003",
+  "business_date": "2026-10-04",
+  "currency": "MXN",
+  "tickets": 81,
+  "sales_units": 185,
+  "sales_net": "140528.54",
+  "returns_units": 3,
+  "returns_net": "2885.35"
+ },
+ {
+  "store_code": "MX-MTY-001",
+  "business_date": "2026-10-04",
+  "currency": "MXN",
+  "tickets": 109,
+  "sales_units": 272,
+  "sales_net": "220444.97",
+  "returns_units": 6,
+  "returns_net": "4555.35"
+ },
+ {
+  "store_code": "MX-PUE-001",
+  "business_date": "2026-10-04",
+  "currency": "MXN",
+  "tickets": 77,
+  "sales_units": 184,
+  "sales_net": "144561.70",
+  "returns_units": 5,
+  "returns_net": "3073.28"
+ }
+]

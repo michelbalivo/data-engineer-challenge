@@ -1,0 +1,392 @@
+[
+ {
+  "store_code": "ES-ALC-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 83,
+  "sales_units": 198,
+  "sales_net": "7951.95",
+  "returns_units": 5,
+  "returns_net": "226.23"
+ },
+ {
+  "store_code": "ES-BCN-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 119,
+  "sales_units": 298,
+  "sales_net": "11428.80",
+  "returns_units": 4,
+  "returns_net": "97.35"
+ },
+ {
+  "store_code": "ES-BCN-002",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 124,
+  "sales_units": 330,
+  "sales_net": "12064.37",
+  "returns_units": 6,
+  "returns_net": "244.37"
+ },
+ {
+  "store_code": "ES-BIO-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 94,
+  "sales_units": 220,
+  "sales_net": "7883.48",
+  "returns_units": 2,
+  "returns_net": "63.97"
+ },
+ {
+  "store_code": "ES-MAD-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 255,
+  "sales_units": 650,
+  "sales_net": "24936.55",
+  "returns_units": 15,
+  "returns_net": "539.55"
+ },
+ {
+  "store_code": "ES-MAD-002",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 115,
+  "sales_units": 287,
+  "sales_net": "10770.15",
+  "returns_units": 2,
+  "returns_net": "46.99"
+ },
+ {
+  "store_code": "ES-MAD-003",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 114,
+  "sales_units": 261,
+  "sales_net": "9378.18",
+  "returns_units": 3,
+  "returns_net": "90.78"
+ },
+ {
+  "store_code": "ES-MAL-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 88,
+  "sales_units": 249,
+  "sales_net": "9168.52",
+  "returns_units": 8,
+  "returns_net": "289.75"
+ },
+ {
+  "store_code": "ES-PMI-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 99,
+  "sales_units": 253,
+  "sales_net": "9427.59",
+  "returns_units": 6,
+  "returns_net": "242.07"
+ },
+ {
+  "store_code": "ES-SEV-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 81,
+  "sales_units": 199,
+  "sales_net": "6935.03",
+  "returns_units": 4,
+  "returns_net": "95.69"
+ },
+ {
+  "store_code": "ES-VGO-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 106,
+  "sales_units": 261,
+  "sales_net": "9732.26",
+  "returns_units": 7,
+  "returns_net": "350.12"
+ },
+ {
+  "store_code": "ES-VLC-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 128,
+  "sales_units": 327,
+  "sales_net": "13048.50",
+  "returns_units": 7,
+  "returns_net": "207.82"
+ },
+ {
+  "store_code": "ES-VLC-002",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 93,
+  "sales_units": 250,
+  "sales_net": "9404.81",
+  "returns_units": 7,
+  "returns_net": "201.36"
+ },
+ {
+  "store_code": "FR-BOD-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 116,
+  "sales_units": 278,
+  "sales_net": "10302.27",
+  "returns_units": 10,
+  "returns_net": "363.42"
+ },
+ {
+  "store_code": "FR-LIL-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 84,
+  "sales_units": 209,
+  "sales_net": "7826.22",
+  "returns_units": 2,
+  "returns_net": "39.08"
+ },
+ {
+  "store_code": "FR-LYS-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 111,
+  "sales_units": 250,
+  "sales_net": "9859.39",
+  "returns_units": 5,
+  "returns_net": "283.63"
+ },
+ {
+  "store_code": "FR-MRS-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 95,
+  "sales_units": 232,
+  "sales_net": "9164.56",
+  "returns_units": 5,
+  "returns_net": "156.46"
+ },
+ {
+  "store_code": "FR-PAR-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 237,
+  "sales_units": 600,
+  "sales_net": "22811.06",
+  "returns_units": 15,
+  "returns_net": "499.29"
+ },
+ {
+  "store_code": "FR-PAR-002",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 112,
+  "sales_units": 287,
+  "sales_net": "10554.81",
+  "returns_units": 8,
+  "returns_net": "301.02"
+ },
+ {
+  "store_code": "FR-PAR-003",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 109,
+  "sales_units": 276,
+  "sales_net": "10260.21",
+  "returns_units": 4,
+  "returns_net": "197.68"
+ },
+ {
+  "store_code": "FR-TLS-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 85,
+  "sales_units": 186,
+  "sales_net": "7108.53",
+  "returns_units": 5,
+  "returns_net": "208.14"
+ },
+ {
+  "store_code": "GB-BHM-001",
+  "business_date": "2026-10-05",
+  "currency": "GBP",
+  "tickets": 136,
+  "sales_units": 327,
+  "sales_net": "11851.29",
+  "returns_units": 4,
+  "returns_net": "233.06"
+ },
+ {
+  "store_code": "GB-BRS-001",
+  "business_date": "2026-10-05",
+  "currency": "GBP",
+  "tickets": 84,
+  "sales_units": 231,
+  "sales_net": "7726.69",
+  "returns_units": 12,
+  "returns_net": "430.75"
+ },
+ {
+  "store_code": "GB-GLA-001",
+  "business_date": "2026-10-05",
+  "currency": "GBP",
+  "tickets": 97,
+  "sales_units": 262,
+  "sales_net": "8919.16",
+  "returns_units": 8,
+  "returns_net": "296.52"
+ },
+ {
+  "store_code": "GB-LON-001",
+  "business_date": "2026-10-05",
+  "currency": "GBP",
+  "tickets": 246,
+  "sales_units": 560,
+  "sales_net": "18695.72",
+  "returns_units": 16,
+  "returns_net": "511.34"
+ },
+ {
+  "store_code": "GB-LON-002",
+  "business_date": "2026-10-05",
+  "currency": "GBP",
+  "tickets": 124,
+  "sales_units": 303,
+  "sales_net": "10372.76",
+  "returns_units": 10,
+  "returns_net": "267.43"
+ },
+ {
+  "store_code": "GB-MAN-001",
+  "business_date": "2026-10-05",
+  "currency": "GBP",
+  "tickets": 100,
+  "sales_units": 234,
+  "sales_net": "7850.73",
+  "returns_units": 4,
+  "returns_net": "94.05"
+ },
+ {
+  "store_code": "MX-GDL-001",
+  "business_date": "2026-10-05",
+  "currency": "MXN",
+  "tickets": 94,
+  "sales_units": 213,
+  "sales_net": "184360.71",
+  "returns_units": 2,
+  "returns_net": "972.41"
+ },
+ {
+  "store_code": "MX-MEX-001",
+  "business_date": "2026-10-05",
+  "currency": "MXN",
+  "tickets": 244,
+  "sales_units": 596,
+  "sales_net": "503907.18",
+  "returns_units": 6,
+  "returns_net": "7787.93"
+ },
+ {
+  "store_code": "MX-MEX-002",
+  "business_date": "2026-10-05",
+  "currency": "MXN",
+  "tickets": 127,
+  "sales_units": 293,
+  "sales_net": "242928.97",
+  "returns_units": 5,
+  "returns_net": "5126.90"
+ },
+ {
+  "store_code": "MX-MEX-003",
+  "business_date": "2026-10-05",
+  "currency": "MXN",
+  "tickets": 86,
+  "sales_units": 201,
+  "sales_net": "166152.98",
+  "returns_units": 4,
+  "returns_net": "5056.90"
+ },
+ {
+  "store_code": "MX-MTY-001",
+  "business_date": "2026-10-05",
+  "currency": "MXN",
+  "tickets": 108,
+  "sales_units": 238,
+  "sales_net": "194034.05",
+  "returns_units": 4,
+  "returns_net": "3031.03"
+ },
+ {
+  "store_code": "MX-PUE-001",
+  "business_date": "2026-10-05",
+  "currency": "MXN",
+  "tickets": 82,
+  "sales_units": 229,
+  "sales_net": "181231.40",
+  "returns_units": 12,
+  "returns_net": "9409.71"
+ },
+ {
+  "store_code": "PT-BRG-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 100,
+  "sales_units": 249,
+  "sales_net": "8905.98",
+  "returns_units": 3,
+  "returns_net": "62.81"
+ },
+ {
+  "store_code": "PT-COI-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 108,
+  "sales_units": 251,
+  "sales_net": "9089.83",
+  "returns_units": 5,
+  "returns_net": "182.73"
+ },
+ {
+  "store_code": "PT-LIS-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 201,
+  "sales_units": 536,
+  "sales_net": "19946.94",
+  "returns_units": 13,
+  "returns_net": "504.93"
+ },
+ {
+  "store_code": "PT-LIS-002",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 95,
+  "sales_units": 197,
+  "sales_net": "7381.35",
+  "returns_units": 13,
+  "returns_net": "498.66"
+ },
+ {
+  "store_code": "PT-LIS-003",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 82,
+  "sales_units": 199,
+  "sales_net": "7558.76",
+  "returns_units": 4,
+  "returns_net": "205.52"
+ },
+ {
+  "store_code": "PT-OPO-001",
+  "business_date": "2026-10-05",
+  "currency": "EUR",
+  "tickets": 117,
+  "sales_units": 238,
+  "sales_net": "9165.47",
+  "returns_units": 4,
+  "returns_net": "116.14"
+ }
+]
